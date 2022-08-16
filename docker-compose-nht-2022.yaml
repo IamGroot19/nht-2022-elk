@@ -42,8 +42,8 @@ services:
       - XPACK_MONITORING_ENABLED=false
     entrypoint: ["/bin/bash", "-c"]
 
-    # sleep 3000 is for debugging -- remove it while running docker-compose
-    command: ["sleep 3000 && ./bin/logstash -f custom-config/logstash/conf-wo-filebeat.d  --log.level debug | tee -a custom-config/logstash-logs.txt"]
+    # Add a `sleep 3000 &&` for debugging -- remove it while running docker-compose
+    command: ["./bin/logstash -f custom-config/logstash/conf-wo-filebeat.d  --log.level debug | tee -a custom-config/logstash-logs.txt"]
 
   kibana:
     container_name: kibana

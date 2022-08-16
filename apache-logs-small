@@ -1,0 +1,47 @@
+83.149.9.216 - - [
+    17/May/2015: 10: 05: 03 +0000
+] "GET /presentations/logstash-monitorama-2013/images/kibana-search.png HTTP/1.1" 200 203023 "http://semicomplete.com/presentations/logstash-monitorama-2013/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537.36"
+83.149.9.216 - - [
+    17/May/2015: 10: 05: 43 +0000
+] "GET /presentations/logstash-monitorama-2013/images/kibana-dashboard3.png HTTP/1.1" 200 171717 "http://semicomplete.com/presentations/logstash-monitorama-2013/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537.36"
+
+[
+    2022-08-15T18: 36: 33,
+    110
+][ERROR
+][logstash.agent
+] Failed to execute action {
+    :action=>LogStash: :PipelineAction: :Create/pipeline_id:main,
+    :exception=>"Java::JavaLang::IllegalStateException",
+    :message=>"Unable to configure plugins: (ConfigurationError) Something is wrong with your configuration.",
+    :backtrace=>[
+        "org.logstash.config.ir.CompiledPipeline.<init>(CompiledPipeline.java:119)",
+        "org.logstash.execution.JavaBasePipelineExt.initialize(JavaBasePipelineExt.java:83)",
+        "org.logstash.execution.JavaBasePipelineExt$INVOKER$i$1$0$initialize.call(JavaBasePipelineExt$INVOKER$i$1$0$initialize.gen)",
+        "org.jruby.internal.runtime.methods.JavaMethod$JavaMethodN.call(JavaMethod.java:837)",
+        "org.jruby.ir.runtime.IRRuntimeHelpers.instanceSuper(IRRuntimeHelpers.java:1169)",
+        "org.jruby.ir.runtime.IRRuntimeHelpers.instanceSuperSplatArgs(IRRuntimeHelpers.java:1156)",
+        "org.jruby.ir.targets.InstanceSuperInvokeSite.invoke(InstanceSuperInvokeSite.java:39)",
+        "usr.share.logstash.logstash_minus_core.lib.logstash.java_pipeline.RUBY$method$initialize$0(/usr/share/logstash/logstash-core/lib/logstash/java_pipeline.rb:47)",
+        "org.jruby.internal.runtime.methods.CompiledIRMethod.call(CompiledIRMethod.java:80)",
+        "org.jruby.internal.runtime.methods.MixedModeIRMethod.call(MixedModeIRMethod.java:70)",
+        "org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:332)",
+        "org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:86)",
+        "org.jruby.RubyClass.newInstance(RubyClass.java:939)",
+        "org.jruby.RubyClass$INVOKER$i$newInstance.call(RubyClass$INVOKER$i$newInstance.gen)",
+        "org.jruby.ir.targets.InvokeSite.invoke(InvokeSite.java:207)",
+        "usr.share.logstash.logstash_minus_core.lib.logstash.pipeline_action.create.RUBY$method$execute$0(/usr/share/logstash/logstash-core/lib/logstash/pipeline_action/create.rb:52)",
+        "usr.share.logstash.logstash_minus_core.lib.logstash.pipeline_action.create.RUBY$method$execute$0$__VARARGS__(/usr/share/logstash/logstash-core/lib/logstash/pipeline_action/create.rb)",
+        "org.jruby.internal.runtime.methods.CompiledIRMethod.call(CompiledIRMethod.java:80)",
+        "org.jruby.internal.runtime.methods.MixedModeIRMethod.call(MixedModeIRMethod.java:70)",
+        "org.jruby.ir.targets.InvokeSite.invoke(InvokeSite.java:207)",
+        "usr.share.logstash.logstash_minus_core.lib.logstash.agent.RUBY$block$converge_state$2(/usr/share/logstash/logstash-core/lib/logstash/agent.rb:389)",
+        "org.jruby.runtime.CompiledIRBlockBody.callDirect(CompiledIRBlockBody.java:138)",
+        "org.jruby.runtime.IRBlockBody.call(IRBlockBody.java:58)",
+        "org.jruby.runtime.IRBlockBody.call(IRBlockBody.java:52)",
+        "org.jruby.runtime.Block.call(Block.java:139)",
+        "org.jruby.RubyProc.call(RubyProc.java:318)",
+        "org.jruby.internal.runtime.RubyRunnable.run(RubyRunnable.java:105)",
+        "java.base/java.lang.Thread.run(Thread.java:834)"
+    ]
+}

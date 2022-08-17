@@ -43,7 +43,7 @@ services:
     entrypoint: ["/bin/bash", "-c"]
 
     # Add a `sleep 3000 &&` for debugging -- remove it while running docker-compose
-    command: ["./bin/logstash -f custom-config/logstash/conf-wo-filebeat.d  --log.level debug | tee -a custom-config/logstash-logs.txt"]
+    command: ["./bin/logstash -f custom-config/logstash/nht-demo.conf  --log.level debug | tee -a custom-config/logstash-logs.txt"]
 
   kibana:
     container_name: kibana
